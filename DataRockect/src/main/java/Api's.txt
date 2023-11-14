@@ -1,0 +1,141 @@
+			API'S FOR DATA ROCKET TASK(ITG_164)                                    07/11/2023------->Rohith Lokam
+
+1)EmployHiring
+
+	*postApi---> 	localhost:8080/DataRocket/Hiring_employees
+		json---> {
+    "username":"vdande",
+    "password":"vin123",
+
+    "empid":34,
+    "firstname":"jeefdgd",
+    "lastname":"kanaparfgdf",
+    "phonenumber":93914945365,
+    "zipcode":535569,
+    "department":"labs",
+    "role":"employ",
+    "dob":"04/01/2003",
+    "joindate":"21/08/2023"
+}
+
+2)ProjectCreation
+	*postApi---> localhost:8080/DataRocket/creating_project
+		json--->  {
+    "username":"vdande",
+    "password":"vin123",
+
+    "projectName":"WaLmart",
+    "description":"The main motives of the project is transfer the files from store to application without interuption and secure way ",
+    "startDate":"18/10/2018",
+    "endDate":"05/07/2027",
+    "requiredEmployes":"18",
+    "projectManager":"jpotnuru",
+    "hr":"svabbilisetti"
+
+}
+	
+3)ProjectAssign
+	*postApi---> localhost:8080/DataRocket/employees_assigned_project
+		json---> {
+    "username":"rlokam",
+    "password":"roh123",
+    "empid":2,
+    "projectid":"DMAAS18112009"
+
+}
+
+4)ProjectCloning
+	*postApi---> localhost:8080/DataRocket/project_cloning
+		json---> {
+    "username":"vdande",
+    "password":"vin123",
+    "existingProjectId":"DMAAS18112009",
+    "newProjectName":"SUBURU"
+}
+
+5)ProjectTasks
+	*postApi---> localhost:8080/DataRocket/creating_tasks
+		json---> {
+    "username":"rlokam",
+    "password":"roh123",
+
+    "projectid":"DMAAS18112009",
+    "taskname":"Conveyor",
+    "description":"A system or process for the continuous and orderly transfer of data or materials between various stages or components, ensuring smooth progression and handling.",
+    "duration":"32H"
+}
+	*postApi---> localhost:8080/DataRocket/updating_tasks
+		json---> {
+     "username":"rlokam",
+    "password":"roh123",
+
+    "taskid":"DataMover1717",
+    "description":" Monitors and logs secure data transfer activities, providing real-time insights into the progress and security of the transfer process.",
+    "duration":"24H"
+}
+	*postApi---> localhost:8080/DataRocket/deleting_tasks
+		json---> {
+     "username":"rlokam",
+    "password":"roh123",
+
+    "taskid":"DataMover1717"
+}
+	*postApi---> localhost:8080/DataRocket/finished_task
+		json---> {
+     "username":"rlokam",
+    "password":"roh123",
+
+    "taskid":"DataMover1717"
+}
+	*getApi---> localhost:8080/DataRocket/retrive_data
+		json---> {
+    "username":"rlokam",
+    "password":"roh123",
+    "projectid":"DMAAS18112009"
+    }
+    
+6)EmployTasks
+	*postApi---> localhost:8080/employ_tasks/assign_task
+		json---> 
+    {
+     "username":"rlokam",
+    "password":"roh123",
+
+    "taskid":"Conveyor2316",
+    "projectid":"DMAAS18112009",
+    "employid":"16",
+    "startdate":"07/11/2023",
+    "enddate":"11/11/2023"
+
+}
+	
+7)projectMeetings
+	*postApi---> local:8080/DataRocket/create_meeting
+		json--->
+		{
+    "userName":"svabbilisetti",
+    "password":"sad123",
+    "meetingName":"datamigrating",
+    "meetingContacts":"8,9,10",
+    "startTime":"23:00",
+    "projectId":"WaLmart18102018",
+    "duration":"30",
+    "description":"THE MEETING IS ABOUT MIGRATING THE AZURE TO AWS."
+
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
