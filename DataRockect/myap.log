@@ -1,0 +1,77 @@
+2023-12-01T12:16:30.156+05:30  INFO 11048 --- [restartedMain] com.DataRockect.DataRockectApplication   : Starting DataRockectApplication using Java 17.0.5 with PID 11048 (/home/miracle123/Desktop/Rohith/DataRockect/target/classes started by miracle123 in /home/miracle123/Desktop/Rohith/DataRockect)
+2023-12-01T12:16:30.156+05:30  INFO 11048 --- [restartedMain] com.DataRockect.DataRockectApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T12:16:30.224+05:30  INFO 11048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-12-01T12:16:30.225+05:30  INFO 11048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+2023-12-01T12:16:30.308+05:30  INFO 11048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-01T12:16:30.309+05:30  INFO 11048 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-01T12:16:30.309+05:30  INFO 11048 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01T12:16:30.313+05:30  INFO 11048 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-01T12:16:30.313+05:30  INFO 11048 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 155 ms
+2023-12-01T12:16:30.612+05:30  INFO 11048 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2023-12-01T12:16:30.621+05:30  INFO 11048 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a43dad8
+2023-12-01T12:16:30.621+05:30  INFO 11048 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2023-12-01T12:16:30.660+05:30  INFO 11048 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-12-01T12:16:30.666+05:30  INFO 11048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-01T12:16:30.669+05:30  INFO 11048 --- [restartedMain] com.DataRockect.DataRockectApplication   : Started DataRockectApplication in 0.524 seconds (process running for 133.413)
+2023-12-01T12:16:30.670+05:30  INFO 11048 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-12-01T12:16:38.979+05:30  INFO 11362 --- [restartedMain] com.DataRockect.DataRockectApplication   : Starting DataRockectApplication using Java 17.0.5 with PID 11362 (/home/miracle123/Desktop/Rohith/DataRockect/target/classes started by miracle123 in /home/miracle123/Desktop/Rohith/DataRockect)
+2023-12-01T12:16:38.980+05:30  INFO 11362 --- [restartedMain] com.DataRockect.DataRockectApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T12:16:39.007+05:30  INFO 11362 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-01T12:16:39.008+05:30  INFO 11362 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-01T12:16:39.305+05:30  INFO 11362 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-12-01T12:16:39.315+05:30  INFO 11362 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2023-12-01T12:16:39.720+05:30  INFO 11362 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-01T12:16:39.725+05:30  INFO 11362 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-01T12:16:39.726+05:30  INFO 11362 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01T12:16:39.757+05:30  INFO 11362 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-01T12:16:39.757+05:30  INFO 11362 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 749 ms
+2023-12-01T12:16:40.272+05:30  INFO 11362 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T12:16:40.445+05:30  INFO 11362 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@618e9347
+2023-12-01T12:16:40.447+05:30  INFO 11362 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T12:16:40.543+05:30  WARN 11362 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2023-12-01T12:16:40.558+05:30  WARN 11362 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2023-12-01T12:16:40.560+05:30  INFO 11362 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T12:16:40.572+05:30  INFO 11362 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-12-01T12:16:40.576+05:30  INFO 11362 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-01T12:16:40.589+05:30  INFO 11362 --- [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-12-01T12:16:40.620+05:30 ERROR 11362 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2023-12-01T12:16:43.416+05:30  INFO 11048 --- [RMI TCP Connection(6)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-12-01T12:16:43.417+05:30  INFO 11048 --- [RMI TCP Connection(6)-127.0.0.1] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-01T12:16:43.419+05:30  INFO 11048 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2023-12-01T12:16:43.421+05:30  INFO 11048 --- [RMI TCP Connection(6)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2023-12-01T12:16:44.825+05:30  INFO 11434 --- [restartedMain] com.DataRockect.DataRockectApplication   : Starting DataRockectApplication using Java 17.0.5 with PID 11434 (/home/miracle123/Desktop/Rohith/DataRockect/target/classes started by miracle123 in /home/miracle123/Desktop/Rohith/DataRockect)
+2023-12-01T12:16:44.826+05:30  INFO 11434 --- [restartedMain] com.DataRockect.DataRockectApplication   : No active profile set, falling back to 1 default profile: "default"
+2023-12-01T12:16:44.854+05:30  INFO 11434 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-12-01T12:16:44.855+05:30  INFO 11434 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-12-01T12:16:45.150+05:30  INFO 11434 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-12-01T12:16:45.161+05:30  INFO 11434 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 0 JDBC repository interfaces.
+2023-12-01T12:16:45.591+05:30  INFO 11434 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-12-01T12:16:45.597+05:30  INFO 11434 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-12-01T12:16:45.597+05:30  INFO 11434 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.16]
+2023-12-01T12:16:45.630+05:30  INFO 11434 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-12-01T12:16:45.630+05:30  INFO 11434 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 775 ms
+2023-12-01T12:16:46.192+05:30  INFO 11434 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-12-01T12:16:46.371+05:30  INFO 11434 --- [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e690052
+2023-12-01T12:16:46.372+05:30  INFO 11434 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-12-01T12:16:46.467+05:30  INFO 11434 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-12-01T12:16:46.487+05:30  INFO 11434 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-12-01T12:16:46.494+05:30  INFO 11434 --- [restartedMain] com.DataRockect.DataRockectApplication   : Started DataRockectApplication in 1.883 seconds (process running for 2.284)
+2023-12-01T12:17:53.011+05:30  INFO 11434 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-12-01T12:17:53.020+05:30  INFO 11434 --- [Thread-5] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2023-12-01T12:17:53.031+05:30  INFO 11434 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-12-01T12:17:53.037+05:30  INFO 11434 --- [Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

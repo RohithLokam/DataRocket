@@ -1,8 +1,13 @@
 package com.DataRockect.EmployTasks;
 
+
+import org.apache.logging.log4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Map;
@@ -12,8 +17,9 @@ public class EmployTasksInsertService {
 	
 	@Autowired
 	JdbcTemplate jt;
-
+	@ExceptionHandler
 	public String assignTasks(EmployTasks employTasks) {
+		Logger log=(Logger) LoggerFactory.getLogger(EmployTasksInsertService.class);
 		String message="",role="",status="";
 		int empid=0;
 		String username=employTasks.getUserName();
@@ -39,6 +45,7 @@ public class EmployTasksInsertService {
 					List<Map<String,Object>> infoo=new ArrayList<Map<String,Object>>();
 					infoo=jt.queryForList(queryy,taskid,employid);
 					if(!infoo.isEmpty()) {
+						log.warn(message);
 						message="employee already working on this project";
 					}
 					else {
@@ -59,31 +66,38 @@ public class EmployTasksInsertService {
 								String enter="insert into employ_task_list values(?,?,?,?,?,?,?)";
 								int i=jt.update(enter,taskid,employid,projectid,username,startdate,enddate,taskstatus);
 								if(i>0) {
+									log.info(message);
 									message="Task Assigned Successfully";
 									String update="update project_tasks set status='A' where task_id=?";
 									jt.update(update,taskid);
 								}
 							}else {
+								log.warn(message);
 								message="Its Not Your Task To Assign Employees.";
 								}
 						}else {
+							log.warn(message);
 							message="Employ Not Available To Your Project";
 						}
 					
 				}
 					else {
+						log.warn(message);
 						message="Its Not Your Project To Assign Tasks";
 					}
 					}
 					}else {
+						log.warn(message);
 					message="You Are Not Assign To Any Project To Assign A Task To The Employees";
 				}
 				
 			}else {
+				log.warn(message);
 				message="You Are Not Allowed To Assign Tasks.";
 			}
 			
 		}else {
+			log.error(message);
 			message="Invalid Credentials";
 		}
 		return message;

@@ -34,7 +34,7 @@ public class ProjectTasksRetriveService {
 					String projectstatus=projectTasks.getStatus();
 					String duration=projectTasks.getDuration();
 					String projectid=projectTasks.getProjectId();
-					String sql="select * from project_tasks where 9=4+5 ";
+					String sql="select * from project_tasks where 9=9 ";
 					if(projectstatus!=null) {
 						sql=sql+" and status='"+projectstatus+"'";
 					}if(duration!=null) {

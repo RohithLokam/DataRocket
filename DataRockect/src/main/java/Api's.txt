@@ -4,14 +4,14 @@
 
 	*postApi---> 	localhost:8080/DataRocket/Hiring_employees
 		json---> {
-    "username":"vdande",
+    "userName":"vdande",
     "password":"vin123",
 
-    "empid":34,
-    "firstname":"jeefdgd",
-    "lastname":"kanaparfgdf",
-    "phonenumber":93914945365,
-    "zipcode":535569,
+    "empId":34,
+    "firstName":"jeefdgd",
+    "lastName":"kanaparfgdf",
+    "phoneNumber":93914945365,
+    "zipCode":535569,
     "department":"labs",
     "role":"employ",
     "dob":"04/01/2003",

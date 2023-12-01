@@ -1,0 +1,60 @@
+12:18:39.661 [restartedMain] INFO  c.DataRockect.DataRockectApplication - Starting DataRockectApplication using Java 17.0.5 with PID 11434 (/home/miracle123/Desktop/Rohith/DataRockect/target/classes started by miracle123 in /home/miracle123/Desktop/Rohith/DataRockect)
+12:18:39.661 [restartedMain] INFO  c.DataRockect.DataRockectApplication - No active profile set, falling back to 1 default profile: "default"
+12:18:39.721 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+12:18:39.722 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+12:18:39.801 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+12:18:39.801 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:18:39.801 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+12:18:39.804 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:18:39.805 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 143 ms
+12:18:40.125 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+12:18:40.133 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5455a63
+12:18:40.134 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+12:18:40.187 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:18:40.195 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+12:18:40.199 [restartedMain] INFO  c.DataRockect.DataRockectApplication - Started DataRockectApplication in 0.55 seconds (process running for 115.988)
+12:18:40.200 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:18:41.594 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:18:41.596 [Thread-21] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:18:41.598 [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+12:18:41.600 [Thread-21] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+12:18:41.636 [restartedMain] INFO  c.DataRockect.DataRockectApplication - Starting DataRockectApplication using Java 17.0.5 with PID 11434 (/home/miracle123/Desktop/Rohith/DataRockect/target/classes started by miracle123 in /home/miracle123/Desktop/Rohith/DataRockect)
+12:18:41.636 [restartedMain] INFO  c.DataRockect.DataRockectApplication - No active profile set, falling back to 1 default profile: "default"
+12:18:41.700 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+12:18:41.701 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+12:18:41.784 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+12:18:41.784 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:18:41.784 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+12:18:41.787 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:18:41.787 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 150 ms
+12:18:42.088 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+12:18:42.096 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@44737884
+12:18:42.096 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+12:18:42.138 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:18:42.144 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+12:18:42.147 [restartedMain] INFO  c.DataRockect.DataRockectApplication - Started DataRockectApplication in 0.523 seconds (process running for 117.937)
+12:18:42.148 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:18:59.583 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:18:59.586 [Thread-25] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:18:59.590 [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+12:18:59.592 [Thread-25] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+12:18:59.630 [restartedMain] INFO  c.DataRockect.DataRockectApplication - Starting DataRockectApplication using Java 17.0.5 with PID 11434 (/home/miracle123/Desktop/Rohith/DataRockect/target/classes started by miracle123 in /home/miracle123/Desktop/Rohith/DataRockect)
+12:18:59.630 [restartedMain] INFO  c.DataRockect.DataRockectApplication - No active profile set, falling back to 1 default profile: "default"
+12:18:59.690 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+12:18:59.691 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 JDBC repository interfaces.
+12:18:59.769 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+12:18:59.770 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:18:59.770 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.16]
+12:18:59.772 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:18:59.772 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 141 ms
+12:19:00.058 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+12:19:00.066 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@571733c
+12:19:00.066 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+12:19:00.104 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:19:00.112 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+12:19:00.115 [restartedMain] INFO  c.DataRockect.DataRockectApplication - Started DataRockectApplication in 0.496 seconds (process running for 135.905)
+12:19:00.116 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:20:31.717 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:20:31.720 [Thread-29] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:20:31.724 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+12:20:31.726 [Thread-29] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.

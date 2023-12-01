@@ -65,7 +65,6 @@ public class ProjectMeetingsService {
 				if(!info.isEmpty()) {
 					String details[]=meetingcontacts.split(",");
 					for(String empid:details) {
-						count++;
 						String seequel="select * from project_employ_details where employ_id=? and project_id=?";
 						String seequl="select role from SearchData where empid=?";
 						List<Map<String,Object>> table=new ArrayList<Map<String,Object>>();
@@ -88,12 +87,14 @@ public class ProjectMeetingsService {
 								LocalTime startTime=LocalTime.parse(start_time,dfm);
 								LocalTime endTime=LocalTime.parse(end_time,dfm);
 								if((tim.isAfter(endTime) || timee.isBefore(startTime))|| detail.isEmpty()) {
+									count++;
 									String meetingid=meetingname+starting_time.substring(0,2)+starting_time.substring(3,5);
 									String queryy="insert into project_meetings values(?,?,?,?,?,?,?,?,?,?,?)";
 									int i=jt.update(queryy,meetingid,meetingname,empid,projectid,starting_time,ending_time,duration,date,username,"S",description);
-									if(i==count) {
+									if(details.length==count) {
 										message="Meeting Sheduled Successfully";
 										sendingmail(details,username,date,starting_time);
+										System.out.println(i+" "+count);
 									}
 								}else {
 									message=message+name+" Has Already heduled  Meeting In That Time.\n";

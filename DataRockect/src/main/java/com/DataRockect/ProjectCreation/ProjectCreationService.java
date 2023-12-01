@@ -16,6 +16,7 @@ public class ProjectCreationService {
 	JdbcTemplate jdbctemplate;
 
 	public String creating(ProjectCreation projectCreation,Logger log) {
+        long startTime = System.currentTimeMillis();
 		String message="",managerStatus="",hrStatus="";
 		String username=projectCreation.getUserName();
 		String password=projectCreation.getPassword();
@@ -24,7 +25,8 @@ public class ProjectCreationService {
 		employdetails=jdbctemplate.queryForList(seequel,username,password);
 		if(employdetails.isEmpty()) {
 			message="invalid credentials";
-			log.error(message);
+            long executionTime = System.currentTimeMillis() - startTime;
+			log.error(message+" Execution time: {} ms", executionTime);
 		}else {
 			try {
 				String projectName=projectCreation.getProjectName();
@@ -47,10 +49,12 @@ public class ProjectCreationService {
 
 				if(projectmanagerdetails.isEmpty()) {
 					message=" Invalid project manager details.  \n";
-					log.warn(message);
+		            long executionTime = System.currentTimeMillis() - startTime;
+					log.warn(message+"  Execution time: {} ms", executionTime);
 				}if(hrdetails.isEmpty()) {
 					message=message+" Invalid hr details. ";
-					log.warn(message);
+		            long executionTime = System.currentTimeMillis() - startTime;
+					log.warn(message+"  Execution time: {} ms", executionTime);
 				}if(!projectmanagerdetails.isEmpty() && !hrdetails.isEmpty()) {
 					for(Map<String,Object> map:projectmanagerdetails) {
 						managerStatus=(String)map.get("status");
@@ -60,10 +64,12 @@ public class ProjectCreationService {
 					}
 					if(managerStatus.equalsIgnoreCase("A") ) {
 						message="project manager currently not available  \n";
-						log.warn(message);
+			            long executionTime = System.currentTimeMillis() - startTime;
+						log.warn(message+"  Execution time: {} ms", executionTime);
 					}if(hrStatus.equalsIgnoreCase("A")) {
 						message=message+"hr currently not available ";
-						log.warn(message);
+			            long executionTime = System.currentTimeMillis() - startTime;
+						log.warn(message+"  Execution time: {} ms", executionTime);
 					}if(managerStatus.equalsIgnoreCase("B") && hrStatus.equalsIgnoreCase("B")) {
 						String insertquery="insert into project_details values(?,?,?,?,?,?,?,?,?)";
 						int i=jdbctemplate.update(insertquery,projectId,projectName,description,startDate,endDate,requiredEmployes,projectManager,hr,assignedBy);
@@ -71,23 +77,28 @@ public class ProjectCreationService {
 						jdbctemplate.update(updatequery,projectManager,hr);			
 						if(i>0) {
 							message="project created successfully";
-							log.info(message);
+				            long executionTime = System.currentTimeMillis() - startTime;
+							log.info(message+"  Execution time: {} ms", executionTime);
 						}else {
 							message="project not created";
-							log.error(message);
+				            long executionTime = System.currentTimeMillis() - startTime;
+							log.error(message+"  Execution time: {} milliseconds", executionTime);
 						}	
 					}else {
 						message="manager/hr not available";
-						log.warn(message);
+			            long executionTime = System.currentTimeMillis() - startTime;
+						log.warn(message+"  Execution time: {} ms", executionTime);
 					}
 				}
 			}
 			catch(Exception exception) {
 				message=exception.getMessage();
-				log.warn(message);
+	            long executionTime = System.currentTimeMillis() - startTime;
+				log.warn(message+"  Execution time: {} ms", executionTime);
 			}
 		}
-		return message;
+        long executionTime = System.currentTimeMillis() - startTime;
+		return message+"  Execution time: {} ms"+ executionTime;
 	}
 }
 

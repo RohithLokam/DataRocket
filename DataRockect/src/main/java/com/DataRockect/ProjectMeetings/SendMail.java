@@ -15,7 +15,7 @@ public class SendMail {
 		
 		SimpleMailMessage sm=new SimpleMailMessage();
 		
-		sm.setFrom("rohithl4681@gmail.com");
+//		sm.setFrom("rohithl4681@gmail.com");
 		sm.setTo("rohith.lokam4681@gmail.com");
 		sm.setText("you have meeting at");
 		sm.setSubject("project meeting");

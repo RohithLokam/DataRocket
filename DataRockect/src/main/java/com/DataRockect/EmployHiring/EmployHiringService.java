@@ -4,10 +4,10 @@ package com.DataRockect.EmployHiring;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
@@ -16,19 +16,20 @@ import org.springframework.stereotype.Service;
 public class EmployHiringService {
 	@Autowired
 	JdbcTemplate jdbctemplate;
-	public String searching(EmployHiring employHiring,Logger log) {
+	
+	public Map<String, String> searching(EmployHiring employHiring) {
+		Map<String,String> message=new HashMap<String,String>();
 		String username=employHiring.getUserName();
 		String password=employHiring.getPassword();
-		String message="",user_role="",roleid="";
-		String sql="select * from SearchemployHiring where username=? and password=?";
+		String user_role="",roleid="";
+		String sql="select * from SearchData where username=? and password=?";
 		List<Map<String,Object>> table=new ArrayList<Map<String,Object>>();
 		table=jdbctemplate.queryForList(sql,username,password); 
 		for(Map<String,Object> info:table) {
 			user_role=(String)info.get("role");	
 		}
 		if(table.isEmpty()){
-			message="invalid credientials";
-			log.error(message);
+			message.put("Error ","invalid credientials");
 		}
 		else {
 			try {
@@ -51,34 +52,28 @@ public class EmployHiringService {
 					+lastname.charAt(lastname.length()-3)+lastname.charAt(lastname.length()-2)
 					+lastname.charAt(lastname.length()-1)+dat;
 					String email=firstname.substring(0,1)+lastname+"@miraclesoft.com";
-					String seequel="insert into SearchemployHiring values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+					String seequel="insert into SearchData values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
 					String sq="select * from Ids where rolee=?";
 					table=jdbctemplate.queryForList(sq,role);
 					for(Map<String,Object> info:table) {
 						roleid=(String)info.get("roleId");
-						System.out.println(roleid);
 					}
 					if(roleid==null || roleid=="") {
-						message="role is invalid";
-						log.warn(message);
+						message.put("Warn ","role is invalid");
 					}else {
 						int i= jdbctemplate.update(seequel,empid,firstname,lastname,phonenumber,zipcode,department,roleid,dob,username,password,email,joindate,status);
 						if(i>0) {
-							message="employHiring inserted";
-							log.info(message);
+							message.put("Info ","employHiring inserted");
 						}
 					}	
 				}else {
-					message=" You Do Not have Access To Enter  Employ employHiring ";
-					log.warn(message);
+					message.put("Warn "," You Do Not have Access To Enter  Employ employHiring ");
 				}
 			}
 			catch(Exception e) {
-				message=e.getMessage();
-				log.error(message);
+				message.put("Error ",e.getMessage());
 			}
 		}
-		log.debug(message);
-		return message;
+		return  message;
 	}
 }
