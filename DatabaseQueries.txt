@@ -1,0 +1,256 @@
+Bank_server     query
+CREATE TABLE `Bank_server` (
+  `Account_number` bigint NOT NULL,
+  `password` bigint DEFAULT NULL,
+  `Balance` bigint DEFAULT NULL,
+  `Email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`Account_number`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+delegate    query
+CREATE TABLE `delegate` (
+  `empid` int NOT NULL,
+  `firstName` varchar(45) DEFAULT NULL,
+  `lastName` varchar(45) DEFAULT NULL,
+  `phoneNumber` bigint DEFAULT NULL,
+  `zipCode` int DEFAULT NULL,
+  `department` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  `dob` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+emp    query
+CREATE TABLE `emp` (
+  `emp_id` int NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `role` varchar(45) NOT NULL,
+  `added_by` varchar(255) NOT NULL,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+Employ   query
+CREATE TABLE `Employ` (
+  `emp_id` int NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `designation` varchar(45) DEFAULT NULL,
+  `emailid` varchar(45) DEFAULT NULL,
+  `phonenumber` bigint DEFAULT NULL,
+  `salary` int DEFAULT NULL,
+  PRIMARY KEY (`emp_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+employ    query
+CREATE TABLE `employ` (
+  `empid` varchar(10) DEFAULT NULL,
+  `empname` varchar(45) DEFAULT NULL,
+  `sal` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+employee    query
+CREATE TABLE `employee` (
+  `id` int NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `dept` varchar(45) DEFAULT NULL,
+  `salary` bigint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+employ_task_list   query
+CREATE TABLE `employ_task_list` (
+  `task_id` varchar(45) NOT NULL,
+  `employ_id` int NOT NULL,
+  `project_id` varchar(45) NOT NULL,
+  `project_manager` varchar(45) DEFAULT NULL,
+  `start_date` varchar(45) DEFAULT NULL,
+  `end_date` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+Ids   query
+CREATE TABLE `Ids` (
+  `roleId` varchar(9) NOT NULL,
+  `rolee` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`roleId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+Info   query
+CREATE TABLE `Info` (
+  `id` int DEFAULT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  `number` bigint DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+officer   query
+CREATE TABLE `officer` (
+  `empid` varchar(45) NOT NULL,
+  `firstname` varchar(45) NOT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `phonenumber` varchar(45) NOT NULL,
+  `zipcode` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  `branch` varchar(45) DEFAULT NULL,
+  `department` varchar(45) DEFAULT NULL,
+  `dob` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`empid`),
+  UNIQUE KEY `empid_UNIQUE` (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+practice    query
+CREATE TABLE `practice` (
+  `id` int NOT NULL,
+  `name` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`,`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+project_details   query
+CREATE TABLE `project_details` (
+  `project_id` varchar(18) NOT NULL,
+  `project_name` varchar(45) DEFAULT NULL,
+  `description` varchar(189) DEFAULT NULL,
+  `start_date` varchar(45) DEFAULT NULL,
+  `end_date` varchar(45) DEFAULT NULL,
+  `required_employees` int DEFAULT NULL,
+  `project_manager` varchar(45) DEFAULT NULL,
+  `Hr_manager` varchar(45) DEFAULT NULL,
+  `assigned_by` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`project_id`),
+  UNIQUE KEY `project_name_UNIQUE` (`project_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+project_employ_details   query
+CREATE TABLE `project_employ_details` (
+  `project_id` varchar(18) NOT NULL,
+  `project_name` varchar(45) DEFAULT NULL,
+  `employ_id` int NOT NULL,
+  `employ_name` varchar(45) DEFAULT NULL,
+  `phone_number` bigint DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `join_date` varchar(45) DEFAULT NULL,
+  `assigned_date` varchar(45) DEFAULT NULL,
+  `assigned_by` varchar(45) DEFAULT NULL,
+  KEY `fk_project_employ_details_1_idx` (`project_id`,`employ_id`),
+  KEY `fk_project_employ_details_2_idx` (`employ_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+project_meetings   query
+CREATE TABLE `project_meetings` (
+  `meeting_id` varchar(18) NOT NULL,
+  `meeting_name` varchar(45) NOT NULL,
+  `meeting_contacts` varchar(45) NOT NULL,
+  `project_id` varchar(45) NOT NULL,
+  `start_time` varchar(45) NOT NULL,
+  `end_time` varchar(45) NOT NULL,
+  `duration` varchar(45) NOT NULL,
+  `date` varchar(45) NOT NULL,
+  `created_by` varchar(45) NOT NULL,
+  `status` varchar(45) NOT NULL,
+  `description` varchar(189) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+project_tasks  query
+CREATE TABLE `project_tasks` (
+  `project_id` varchar(18) NOT NULL,
+  `task_id` varchar(45) NOT NULL,
+  `task_name` varchar(45) DEFAULT NULL,
+  `description` varchar(279) DEFAULT NULL,
+  `duration` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  `created_by` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`task_id`),
+  KEY `fk_project_tasks_1_idx` (`project_id`),
+  CONSTRAINT `fk_project_tasks_1` FOREIGN KEY (`project_id`) REFERENCES `project_details` (`project_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+sample   query
+CREATE TABLE `sample` (
+  `name` varchar(45) NOT NULL,
+  `id` varchar(9) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+SearchData   query
+CREATE TABLE `SearchData` (
+  `empid` int NOT NULL,
+  `firstname` varchar(45) DEFAULT NULL,
+  `lastname` varchar(45) DEFAULT NULL,
+  `phonenumber` bigint DEFAULT NULL,
+  `zipcode` int DEFAULT NULL,
+  `department` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  `dob` varchar(45) DEFAULT NULL,
+  `username` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `joindate` varchar(45) DEFAULT NULL,
+  `status` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+Student    query
+CREATE TABLE `Student` (
+  `id` int NOT NULL,
+  `name` varchar(36) DEFAULT NULL,
+  `branch` varchar(18) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+students    query
+CREATE TABLE `students` (
+  `id` int NOT NULL,
+  `name` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+team   query
+CREATE TABLE `team` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `role` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7778 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+
+temp   query
+CREATE TABLE `temp` (
+  `empid` int NOT NULL,
+  `fname` varchar(45) DEFAULT NULL,
+  `lname` varchar(45) DEFAULT NULL,
+  `role` varchar(45) DEFAULT NULL,
+  `uname` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `password` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`empid`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
